@@ -1,19 +1,19 @@
 import React from 'react';
 import Logo from '../../assets/img/logo.png';
 
-import { Container } from './styles';
+import { MenuWrapper, LogoImage } from './styles';
 import Button from '../Button';
 
 const Menu = () => {
     return (
-        <Container className="Menu">
+        <MenuWrapper className="Menu">
             <a href="/">
-                <img className="Logo" src={Logo} alt="DevFlix Logo" />
+                <LogoImage src={Logo} alt="Devflix Logo" />
             </a>
-            <Button as="a" className="Button" link="/">
+            <Button as="a" className="ButtonLink" href="/">
                 Novo vídeo
             </Button>
-        </Container>
+        </MenuWrapper>
     );
 };
 
