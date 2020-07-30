@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const Container = styled.button`
     background: transparent;
@@ -9,11 +10,12 @@ export const Container = styled.button`
     font-weight: bold;
     padding: 16px 24px;
     text-decoration: none;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
 
     &:hover,
     &:focus {
-        opacity: 0.5;
+        background-color: var(--white);
+        color: var(--black);
     }
 
     @media (max-width: 800px) {
@@ -28,5 +30,11 @@ export const Container = styled.button`
         outline: 0;
         text-align: center;
         width: 100%;
+
+        &:hover,
+        &:focus {
+            background-color: ${lighten(0.15, '#2a7ae4')};
+            color: var(--white);
+        }
     }
 `;
